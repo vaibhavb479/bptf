@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Iconic Ten Awards Voting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Loader */
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loader img {
+            width: 120px;
+            height: 120px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            background: url('/assets/bftp.png') no-repeat center center/cover;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Form Section */
+        .form-section {
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #ffffff, #f4f4f9);
+        }
+
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .form-section p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        form span {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        form input[type="text"],
+        form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        form button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer .social-icons {
+            margin: 20px 0;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: #ffd700;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff4500;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <img src="/assets/logo.png" alt="Loader Logo">
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+
+            <h1>The Iconic Ten Awards</h1>
+            <p>Celebrating nostalgia and timeless bonds!</p>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+        <h2>Cast Your Vote</h2>
+        <p>Your vote matters! Choose the most deserving for each category.</p>
+        <form id="votingForm" action="https://formsubmit.co/mahamemesunofficial@gmail.com" method="POST">
+
+            <!-- Add hidden fields for form configuration -->
+            <input type="hidden" name="_subject" value="New Voting Response">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Respondent's Name -->
+            <label for="respondentName">Your Name</label>
+            <span>Let us know who is casting the vote.</span>
+            <input type="text" id="respondentName" name="respondentName" placeholder="Enter your name" required>
+
+            <!-- Respondent's Email -->
+            <label for="respondentEmail">Your Email</label>
+            <span>Provide your email address so we can identify the responses.</span>
+            <input type="email" id="respondentEmail" name="respondentEmail" placeholder="Enter your email" required>
+            <hr><br>
+
+            <label for="distanceDefier">The Distance Defier Award</label>
+            <span>For those who crossed continents and moved mountains to keep our bonds alive.</span>
+            <input type="text" id="distanceDefier" name="distanceDefier" placeholder="Enter nominee name" required>
+
+            <label for="legacyStoryteller">The Legacy Storyteller Award</label>
+            <span>For keeping our history alive with grace and bringing our memories to life.</span>
+            <input type="text" id="legacyStoryteller" name="legacyStoryteller" placeholder="Enter nominee name"
+                required>
+
+            <label for="spirit">TThe Spirit Igniter Award</label>
+            <span>For those whose joy and energy remain contagious since '97</span>
+            <input type="text" id="spirit" name="spirit" placeholder="Enter nominee name" required>
+
+            <label for="Luminary">The Stage Luminary Award</label>
+            <span>For those who still light up every room they enter</span>
+            <input type="text" id="Luminary" name="Luminary" placeholder="Enter nominee name" required>
+
+            <label for="Keeper">The Memory Award</label>
+            <span>For preserving our golden moments and shared history</span>
+            <input type="text" id="Keeper" name="Keeper" placeholder="Enter nominee name" required>
+
+            <label for="Agony">The Favourite Agony Aunt Award</label>
+            <span>For being everyone's safe harbor since school days.</span>
+            <input type="text" id="Agony" name="Agony" placeholder="Enter nominee name" required>
+
+            <label for="Young">The Forever Young Award</label>
+            <span>Still has the same energy as 1997.</span>
+            <input type="text" id="Young" name="Young" placeholder="Enter nominee name" required>
+
+            <label for="Glory">The Glow-Up Glory Award</label>
+            <span>Most dramatic transformation since school.</span>
+            <input type="text" id="Glory" name="Glory" placeholder="Enter nominee name" required>
+
+            <label for="Humourist">The Effortless Humourist Award</label>
+            <span>For someone who doesn't intend to be funny but always is.</span>
+            <input type="text" id="Humourist" name="Humourist" placeholder="Enter nominee name" required>
+
+            <label for="Fitness">The Fitness Champion Award</label>
+            <span>For someone who loves fitness and pursues a healthy lifestyle.</span>
+            <input type="text" id="Fitness" name="Fitness" placeholder="Enter nominee name" required>
+
+            <!-- Add other categories as needed -->
+
+            <button type="submit">Submit Your Vote</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="https://instagram.com" target="_blank"> Instagram</a>
+            <a href="https://facebook.com" target="_blank"> Facebook</a>
+        </div>
+        <p>&copy; 2024 Blast from the Past. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Loader Script
+        window.onload = function () {
+            const loader = document.getElementById('loader');
+            setTimeout(() => loader.style.display = 'none', 2000);
+        };
+    </script>
+</body>
+
+</html>
